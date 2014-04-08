@@ -1,0 +1,17 @@
+<module>
+    <inherits name="com.google.gwt.user.User" />
+    <inherits name="com.googlecode.gwtx.Java" />
+    <super-source path="emul" />
+    <source path="com/badlogic/gdx/twl/renderer" />
+    <source path="com/badlogic/gdx/twl/input" />
+    <source path="org/xmlpull" />
+    <source path="gwt/twl" />
+    <source path="de/matthiasmann/twl">
+        <exclude name="renderer/lwjgl/**" />
+        <exclude name="input/lwjgl/**" />
+        <exclude name="utils/PNGDecoder.java" />
+        <exclude name="DatePicker.java" />
+        <exclude name="DatePickerComboBox.java" />
+        <exclude name="FolderBrowser.java" />
+    </source>
+</module>

@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://github.com/steffenschaefer/gwt-gradle-plugin/raw/maven-repo/'
+        }
+    }
+    dependencies {
+        classpath 'de.richsource.gradle.plugins:gwt-gradle-plugin:0.4'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'gwt'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
+}
+
+dependencies {
+    compile 'org.lwjgl.lwjgl:lwjgl:2.9.1'
+    compile 'com.google.code.gwtx:gwtx:1.5.3'
+    compile 'com.badlogicgames.gdx:gdx:1.0-SNAPSHOT'
+    compile 'com.google.gwt:gwt:2.6.0'
+    testCompile 'junit:junit:4.11'
+}
+
+gwt {
+    gwtVersion='2.6.0'
+    modules 'de.matthiasmann.twl.TWL'
+}
